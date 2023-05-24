@@ -1,4 +1,4 @@
-package UE2_Doppelt;
+package UE2_Wagon;
 
 public class WagonLinkedList {
     // *** Membervariablen ***
