@@ -1,8 +1,7 @@
 package UE3_Bookstack;
-
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class Main {
     public static void main(String[] args) throws StackEmptyException {
