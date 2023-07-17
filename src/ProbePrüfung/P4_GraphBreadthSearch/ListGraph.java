@@ -1,7 +1,9 @@
 package ProbePrüfung.P4_GraphBreadthSearch;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class ListGraph {
 
@@ -58,9 +60,21 @@ public class ListGraph {
     }
 
     public List<Integer> performBreadthSearch(int startVertex) {
-        // TODO: Implementierung hinzufuegen
-        return null;
+        Queue<Integer> queue = new LinkedList<Integer>();
+        ArrayList<Integer> visited = new ArrayList<Integer>();
+        queue.add(startVertex);
+
+        while (!queue.isEmpty()) {
+            int currentVertex = queue.poll();
+            if (visited.contains(currentVertex) == false) {
+                visited.add(currentVertex);
+                //Jede Edge von Array-Position anschauen
+                for (Edge e : graph[currentVertex]) {
+                    queue.add(e.toVertex);
+
+                }
+            }
+        }
+        return visited;
     }
-
-
 }

@@ -26,5 +26,23 @@ public class Deck {
 
     public void sortDeck() {
         // TODO: Implementierung hinzufuegen
+        for (int i = 1; i < cardCount; i++) {
+            for (int j = i; j >0; j--) {
+                if (deck[j].getColor().compareTo(deck[j-1].getColor()) < 0){
+                    Card temp = deck[j];
+                    deck[j] = deck[j-1];
+                    deck[j-1] = temp;
+                }
+                //wenn die farbe ist gleich, aber die nummer nicht
+                else if ((deck[j].getColor().compareTo(deck[j-1].getColor()) ==0) &&
+                (deck[j].getNumber() < deck[j-1].getNumber())){
+                    Card temp = deck[j];
+                    deck[j] = deck[j-1];
+                    deck[j-1] = temp;
+                } else{
+                    break;
+                }
+            }
+        }
     }
 }

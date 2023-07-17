@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("*ListGraph*");
         ListGraph listGraph = new ListGraph(6, false);
-        listGraph.addEdge(2,3);
         listGraph.addEdge(2,1);
+        listGraph.addEdge(2,3);
         listGraph.addEdge(1,4);
         listGraph.addEdge(3,5);
 
